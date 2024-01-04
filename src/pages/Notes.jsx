@@ -1,5 +1,5 @@
 import React from "react";
-import { getAllNotes } from "../utils/local-data";
+import { getActiveNotes } from "../utils/local-data";
 import NotesList from "../components/NotesList";
 
 function NotesWrapper() {
@@ -11,7 +11,7 @@ class Notes extends React.Component {
     super(props);
 
     this.state = {
-      notes: getAllNotes(),
+      notes: getActiveNotes(),
     };
   }
 
