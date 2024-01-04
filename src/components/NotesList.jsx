@@ -1,5 +1,6 @@
 import React from "react";
 import NotesItem from "./NotesItem.jsx";
+import PropTypes from "prop-types";
 
 function NotesList({ notes }) {
   if (!notes.length) {
@@ -7,7 +8,7 @@ function NotesList({ notes }) {
       <section className="notes-list-empty">
         <p>Tidak ada catatan 😸</p>
       </section>
-    )
+    );
   }
 
   return (
@@ -18,5 +19,9 @@ function NotesList({ notes }) {
     </section>
   );
 }
+
+NotesList.propTypes = {
+  notes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default NotesList;
