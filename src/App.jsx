@@ -3,6 +3,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import NotesWrapper from "./pages/Notes";
 import Archives from "./pages/Archives";
+import DetailPageWrapper from "./pages/DetailPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<NotesWrapper />}></Route>
           <Route path="/archives" element={<Archives />}></Route>
+          <Route path="/notes/:id" element={<DetailPageWrapper />}></Route>
         </Routes>
       </main>
     </div>
