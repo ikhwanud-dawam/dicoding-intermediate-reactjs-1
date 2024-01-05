@@ -13,7 +13,7 @@ class Archives extends React.Component {
 
   render() {
     return (
-      <section className="homepage">
+      <section className="archives-page">
         <h2>Catatan Arsip</h2>
         <NotesList notes={this.state.archivedNotes} />
       </section>
