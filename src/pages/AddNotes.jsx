@@ -4,10 +4,10 @@ import { addNote } from "../utils/local-data";
 import NoteInput from "../components/NoteInput";
 
 function AddNotes() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function onAddNotesHandler(title, body) {
-    navigate('/')
+    navigate("/");
     addNote(title, body);
   }
 

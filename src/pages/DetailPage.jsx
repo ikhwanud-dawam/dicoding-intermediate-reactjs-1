@@ -8,7 +8,7 @@ import { archiveNote, unarchiveNote, deleteNote } from "../utils/local-data";
 function DetailPageWrapper() {
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   return <DetailPage id={id} navigate={navigate} />;
 }
 
