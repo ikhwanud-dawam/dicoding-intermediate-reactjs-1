@@ -4,7 +4,7 @@ import { showFormattedDate } from "../utils";
 import DetailPageAction from "./NotesItemAction";
 import parse from "html-react-parser";
 
-function MovieDetail({
+function NoteDetails({
   id,
   title,
   createdAt,
@@ -30,7 +30,7 @@ function MovieDetail({
   );
 }
 
-MovieDetail.propTypes = {
+NoteDetails.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
@@ -41,4 +41,4 @@ MovieDetail.propTypes = {
   deleteNote: PropTypes.func.isRequired,
 };
 
-export default MovieDetail;
+export default NoteDetails;

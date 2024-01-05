@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useParams, useNavigate } from "react-router-dom";
 import { getNote } from "../utils/local-data";
-import MovieDetail from "../components/MovieDetail";
+import NoteDetails from "../components/NoteDetails";
+import NotFound from "../components/NotFound";
 import { archiveNote, unarchiveNote, deleteNote } from "../utils/local-data";
 
 function DetailPageWrapper() {
@@ -39,9 +40,13 @@ class DetailPage extends React.Component {
   }
 
   render() {
+    if (this.state.note === undefined) {
+      return <NotFound/>;
+    }
+
     return (
       <section className="detail-page">
-        <MovieDetail
+        <NoteDetails
           {...this.state.note}
           archiveNote={this.onArchiveNoteHandler}
           unarchiveNote={this.onUnarchiveNoteHandler}

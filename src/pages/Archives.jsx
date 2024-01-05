@@ -22,7 +22,7 @@ class Archives extends React.Component {
 
     this.state = {
       archivedNotes: getArchivedNotes(),
-      keyword: "",
+      keyword: props.defaultKeyword || "",
     };
 
     this.onKeywordChangeHandler = this.onKeywordChangeHandler.bind(this);
