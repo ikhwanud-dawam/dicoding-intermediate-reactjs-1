@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaCheck } from "react-icons/fa6";
 
 class NoteInput extends React.Component {
@@ -13,7 +14,6 @@ class NoteInput extends React.Component {
     this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
     this.onBodyInputEventHandler = this.onBodyInputEventHandler.bind(this);
     this.onSubmitChangeEventHandler = this.onSubmitChangeEventHandler.bind(this);
-    
   }
 
   onTitleChangeEventHandler(event) {
@@ -64,5 +64,9 @@ class NoteInput extends React.Component {
     );
   }
 }
+
+NoteInput.propTypes = {
+  addNote: PropTypes.func.isRequired,
+};
 
 export default NoteInput;
