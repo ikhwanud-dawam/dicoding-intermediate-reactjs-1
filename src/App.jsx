@@ -5,6 +5,7 @@ import NotesWrapper from "./pages/Notes";
 import ArchivesWrapper from "./pages/Archives";
 import DetailPageWrapper from "./pages/DetailPage";
 import AddNotes from "./pages/AddNotes";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <Routes>
           <Route path="/" element={<NotesWrapper />}></Route>
           <Route path="/archives" element={<ArchivesWrapper />}></Route>
-          <Route path="/notes/new" element={<AddNotes/>}></Route>
+          <Route path="/notes/new" element={<AddNotes />}></Route>
           <Route path="/notes/:id" element={<DetailPageWrapper />}></Route>
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
     </div>
